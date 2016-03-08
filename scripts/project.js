@@ -20,10 +20,15 @@ PortfolioItem.prototype.buildThumbnails = function() {
   return $newPreview;
 };
 
+projectData.sort(function(a,b) {
+  return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
+});
+
 projectData.forEach(function(ele) {
   projects.push(new PortfolioItem(ele));
   console.log('push occured',new PortfolioItem(ele));
 });
+
 
 projects.forEach(function(a){
   console.log('render happened', a);
