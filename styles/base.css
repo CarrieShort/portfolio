@@ -60,7 +60,7 @@ body {
 
 #portfolio h2 {width: 100%;}
 
-#portfolio article {
+.project-preview {
   width: 50%;
   position: relative;
   background-size: 100%;
@@ -68,26 +68,27 @@ body {
   cursor: pointer;
 }
 
-#portfolio article:before{
+.project-preview:before{
 	content: "";
 	display: block;
 	padding-top: 54%; 	/* fixed aspect ratio */
 }
 
-#portfolio article section{
+.project-preview section{
   position: absolute;
   bottom: 0;
   width: 100%;
   background: rgba(61, 211, 178, 0.8);
   display: none;
 }
-#portfolio article:hover section {
+.project-preview:hover section {
   display: block;
 }
 
 .template {
   display: none;
 }
-.project-details {
-  display: none;
+#portfolio article.project-details {
+width: 100%;
+
 }
