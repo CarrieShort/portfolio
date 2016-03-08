@@ -1,6 +1,7 @@
 var projectData = [
   {
     title:       'Game Closet',
+    project: 'game-closet',
     previewImage:   'preview-game-closet.png',
     shortDesc: 'I show up on hover',
     publishedOn: '2015-11-05',
@@ -9,6 +10,7 @@ var projectData = [
   },
   {
     title:       'Social Circle',
+    project: 'social-circle',
     previewImage:   'preview-social-circle.png',
     shortDesc: 'I show up on hover',
     publishedOn: '2015-11-05',
