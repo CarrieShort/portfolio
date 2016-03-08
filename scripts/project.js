@@ -15,6 +15,16 @@ PortfolioItem.prototype.buildThumbnails = function() {
   $newPreview.attr('data-project', this.project);
   $newPreview.find('h3').html(this.title);
   $newPreview.find('p').html(this.shortDesc);
-
+  $newPreview.removeClass('template');
   return $newPreview;
 };
+
+projectData.forEach(function(ele) {
+  projects.push(new PortfolioItem(ele));
+  console.log('push occured',new PortfolioItem(ele));
+});
+
+projects.forEach(function(a){
+  console.log('render happened', a);
+  $('#portfolio').append(a.buildThumbnails());
+});
