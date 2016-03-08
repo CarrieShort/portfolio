@@ -1,4 +1,4 @@
-var portfolioData = [
+var projectData = [
   {
     title:       'Bacon Ipsum',
     previewImage:   'http://www.imdb.com/name/nm0000102/',
