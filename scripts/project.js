@@ -16,7 +16,7 @@ PortfolioItem.prototype.buildThumbnails = function() {
   $newPreview.find('h3').html(this.title);
   $newPreview.find('p').html(this.shortDesc);
   $newPreview.removeClass('template');
-  $newPreview.css('background','url(img/projects/' + this.previewImage + ') no-repeat');
+  $newPreview.css('background-image','url(img/projects/' + this.previewImage + ')');
   return $newPreview;
 };
 
