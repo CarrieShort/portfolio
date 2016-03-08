@@ -27,7 +27,6 @@ PortfolioItem.prototype.updateDetailModal = function(){
   $projectDetails.data('project', this.project);
   $projectDetails.find('h3').html(this.title);
   $projectDetails.find('.description').html(this.description);
-  $projectDetails.removeClass('template');
   return $projectDetails;
 };
 
