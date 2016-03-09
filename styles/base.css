@@ -115,7 +115,7 @@ width: 100%;
 }
 
 header{
-	position: fixed;
+	position: absolute;
 	top: 0;
 	width: 100%;
 	color: #ffffff;
@@ -123,16 +123,20 @@ header{
 	justify-content: space-between;
 	align-items: center;
 	padding: 20px;
+	transition: all 0.4s ease;
 }
 header h1 {
 	font-size:3em;
 	font-weight: 300;
+	transition: all 0.4s ease;
 }
 header h1 span {
 	display: inline-block;
 	background: url(../img/logo-icon.png) no-repeat;
+	background-size: 100%;
 	width: 45px;
 	height: 45px;
+	transition: all 0.4s ease;
 }
 
 header nav ul li{
@@ -165,3 +169,16 @@ header nav ul li a {
 	font-size: 1.3em;
 }
 .next-line {clear: both;}
+
+.sticky {
+	position: fixed;
+	background: rgba(0,0,0,0.5);
+	padding: 10px 20px;
+}
+.sticky h1 {
+	font-size: 2em;
+}
+.sticky h1 span {
+	width: 25px;
+	height: 25px;
+}
