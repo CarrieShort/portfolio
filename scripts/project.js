@@ -82,3 +82,8 @@ var stickyHeader = function() {
   }
 };
 $(window).scroll(stickyHeader);
+
+$('.mobile-menu').on('click',function(e){
+  e.preventDefault();
+  $('nav ul').slideToggle();
+});
