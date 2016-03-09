@@ -1,0 +1,12 @@
+.sticky {
+	position: fixed;
+	background: rgba(0,0,0,0.5);
+	padding: 10px 20px;
+}
+.sticky h1 {
+	font-size: 2em;
+}
+.sticky h1 span {
+	width: 25px;
+	height: 25px;
+}

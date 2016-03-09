@@ -1,0 +1,22 @@
+* {
+	box-sizing: border-box;
+}
+body {
+  font-family: 'Open Sans',sans-serif;
+}
+
+section {
+	padding: 20px;
+}
+
+h2 {
+	color: #2e9e74;
+	font-size: 2.4em;
+	font-weight: 300;
+}
+
+p {
+	font-size: 1em;
+	line-height: 1.5em;
+	margin: 2em 0;
+}
