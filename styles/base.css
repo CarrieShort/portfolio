@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,800italic,800,700italic,700,600italic,600,400italic,300italic);
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -52,6 +53,23 @@ table {
 }
 body {
   font-family: sans-serif;
+}
+
+section {
+	padding: 20px;
+}
+
+h2 {
+	color: #2e9e74;
+	font-size: 2.4em;
+	font-weight: 300;
+}
+
+p {
+	font-family: 'Open Sans',sans-serif;
+	font-size: 1em;
+	line-height: 1.5em;
+	margin: 2em 0;
 }
 /* Portfolio Preview */
 #portfolio{
@@ -108,6 +126,7 @@ header{
 }
 header h1 {
 	font-size:3em;
+	font-weight: 300;
 }
 header h1 span {
 	display: inline-block;
