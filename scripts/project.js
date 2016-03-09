@@ -55,3 +55,13 @@ $('#portfolio').on('click','.project-preview',function(){
     }
   });
 });
+
+
+$('header nav').on('click','li',function(){
+  var $scrollTo = $(this).data('link');
+  $target = $('section[data-content="' + $scrollTo + '"]');
+  console.log($target);
+  $('html, body').animate({
+    scrollTop: $target.offset().top
+  }, 500);
+});
