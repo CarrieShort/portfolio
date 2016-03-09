@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,800italic,800,700italic,700,600italic,600,400italic,300italic);
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -47,8 +48,28 @@ table {
 	border-spacing: 0;
 }
 /* Global Styles */
+* {
+	box-sizing: border-box;
+}
 body {
   font-family: sans-serif;
+}
+
+section {
+	padding: 20px;
+}
+
+h2 {
+	color: #2e9e74;
+	font-size: 2.4em;
+	font-weight: 300;
+}
+
+p {
+	font-family: 'Open Sans',sans-serif;
+	font-size: 1em;
+	line-height: 1.5em;
+	margin: 2em 0;
 }
 /* Portfolio Preview */
 #portfolio{
@@ -92,3 +113,55 @@ body {
 width: 100%;
 
 }
+
+header{
+	position: fixed;
+	top: 0;
+	width: 100%;
+	color: #ffffff;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px;
+}
+header h1 {
+	font-size:3em;
+	font-weight: 300;
+}
+header h1 span {
+	display: inline-block;
+	background: url(../img/logo-icon.png) no-repeat;
+	width: 45px;
+	height: 45px;
+}
+
+header nav ul li{
+	display: inline-block;
+	margin-right: 20px;
+}
+header nav ul li a {
+	color:#ffffff;
+	text-decoration: none;
+}
+
+.banner {
+	background:url('../img/banner.jpg') no-repeat;
+	display: flex;
+	align-items: flex-end;
+	height: 600px;
+	padding:20px;
+}
+.banner ul li {
+	display: block;
+	border: 1px solid #ffffff;
+	width: 145px;
+	height: 145px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	margin: 5px;
+	float: left;
+	font-size: 1.3em;
+}
+.next-line {clear: both;}

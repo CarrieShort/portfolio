@@ -45,7 +45,7 @@ projects.forEach(function(a){
   $('#portfolio').append(a.buildThumbnails());
 });
 
-$('.project-preview').click(function(){
+$('#portfolio').on('click','.project-preview',function(){
   var $clickedItem = $(this).data('project');
   projects.forEach(function(a){
     console.log(a.project);
@@ -54,4 +54,14 @@ $('.project-preview').click(function(){
       a.updateDetailModal();
     }
   });
+});
+
+
+$('header nav').on('click','li',function(){
+  var $scrollTo = $(this).data('link');
+  $target = $('section[data-content="' + $scrollTo + '"]');
+  console.log($target);
+  $('html, body').animate({
+    scrollTop: $target.offset().top
+  }, 500);
 });
