@@ -1,0 +1,29 @@
+/* Portfolio Preview */
+
+.project-preview {
+  background-size: 100%;
+  background-repeat: none;
+  cursor: pointer;
+}
+
+.project-preview section{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(61, 211, 178, 0.8);
+  display: block;
+}
+
+#portfolio article.project-details {
+width: 100%;
+
+}
+@media screen and (min-width: 600px) {
+  .project-preview {
+    width: 50%;
+  }
+  .project-preview section{
+    display: none;
+  }
+
+}

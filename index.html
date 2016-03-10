@@ -2,14 +2,23 @@
 <html>
   <head>
     <title>Carrie Short - Web Developer</title>
-    <link type="text/css" rel="stylesheet" href="vendor/styles/font-awesome.min.css" />
-    <link type="text/css" rel="stylesheet" href="styles/base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="vendor/styles/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/base/reset.css">
+    <link type="text/css" rel="stylesheet" href="styles/base/default.css">
+    <link type="text/css" rel="stylesheet" href="styles/layout.css">
+    <link type="text/css" rel="stylesheet" href="styles/module/header.css">
+    <link type="text/css" rel="stylesheet" href="styles/module/banner.css">
+    <link type="text/css" rel="stylesheet" href="styles/module/portfolio-preview.css">
+    <link type="text/css" rel="stylesheet" href="styles/state/hover.css">
+    <link type="text/css" rel="stylesheet" href="styles/state/sticky.css">
   </head>
   <body>
     <div class="main-container">
       <header>
         <h1>Carrie <span></span> Short</h1>
         <nav>
+          <a href="#" class="mobile-menu"><i class="fa fa-bars"></i></a>
           <ul>
             <li data-link="about"><a href="#">About</a></li>
             <li data-link="history"><a href="#">History</a></li>
@@ -53,7 +62,7 @@
         </article>
       </section>
       <footer></footer>
-  </div>
+    </div>
     <script src="vendor/scripts/jquery-2.2.1.min.js"></script>
     <script src="scripts/portfolioProjects.js"></script>
     <script src="scripts/project.js"></script>
