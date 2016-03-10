@@ -4,6 +4,7 @@
   background-size: 100%;
   background-repeat: none;
   cursor: pointer;
+  border: 1px solid #ffffff;
 }
 
 .project-preview section{
@@ -12,6 +13,10 @@
   width: 100%;
   background: rgba(61, 211, 178, 0.8);
   display: block;
+  padding: 10px;
+}
+.project-preview section p {
+  margin: 5px 0;
 }
 
 #portfolio article.project-details {
@@ -19,6 +24,13 @@ width: 100%;
 
 }
 @media screen and (min-width: 600px) {
+  .project-preview {
+    width: 50%;
+  }
+
+}
+
+@media screen and (min-width: 800px) {
   .project-preview {
     width: 50%;
   }
