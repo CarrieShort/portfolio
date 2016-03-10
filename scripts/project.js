@@ -2,13 +2,14 @@ var projects = [];
 
 // Constructor function for portfolio item
 function PortfolioItem (opts) {
-  this.title = opts.title;
-  this.previewImage = opts.previewImage;
-  this.project = opts.project;
-  this.shortDesc = opts.shortDesc;
-  this.publishedOn = opts.publishedOn;
-  this.detailedLink = opts.detailedLink;
-  this.description = opts. description;
+  // this.title = opts.title;
+  // this.previewImage = opts.previewImage;
+  // this.project = opts.project;
+  // this.shortDesc = opts.shortDesc;
+  // this.publishedOn = opts.publishedOn;
+  // this.detailedLink = opts.detailedLink;
+  // this.description = opts. description;
+  for (key in opts) this[key] = opts[key];
 }
 
 PortfolioItem.prototype.buildThumbnails = function() {
@@ -47,10 +48,15 @@ projects.forEach(function(a){
 
 $('#portfolio').on('click','.project-preview',function(){
   var $clickedItem = $(this).data('project');
+  var $animatedPreview = $(this).clone();
+  $animatedPreview.addClass('selected');
+  $(this).after($animatedPreview);
+  $('.selected').addClass('move');
   projects.forEach(function(a){
     console.log(a.project);
     if(a.project === $clickedItem){
       console.log('match found');
+
       a.updateDetailModal();
     }
   });

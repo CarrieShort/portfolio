@@ -5,6 +5,7 @@
   background-repeat: none;
   cursor: pointer;
   border: 1px solid #ffffff;
+  transition: all 5.4s ease;
 }
 
 .project-preview section{
@@ -23,6 +24,7 @@
 width: 100%;
 
 }
+
 @media screen and (min-width: 600px) {
   .project-preview {
     width: 50%;
@@ -30,10 +32,30 @@ width: 100%;
 
 }
 
-@media screen and (min-width: 800px) {
-  .project-preview {
-    width: 50%;
+.selected {
+  position: absolute;
+  right: 0;
+  z-index: 99;
+}
+.move {
+  animation: move 3s ease;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes move {
+  0% {
+     right: 0;
   }
+  50% {
+     left: 50%;
+  }
+  100% {
+     left: 0;
+  }
+}
+
+@media screen and (min-width: 800px) {
+
   .project-preview section{
     display: none;
   }
