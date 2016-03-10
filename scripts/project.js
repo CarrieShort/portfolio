@@ -8,13 +8,15 @@ function PortfolioItem (opts) {
 }
 
 PortfolioItem.prototype.buildThumbnails = function() {
-  var $newPreview = $('article.template').clone();
-  $newPreview.data('project', this.project);
-  $newPreview.find('h3').html(this.title);
-  $newPreview.find('p').html(this.shortDesc);
-  $newPreview.removeClass('template');
-  $newPreview.css('background-image','url(img/projects/' + this.previewImage + ')');
-  return $newPreview;
+  var source = $('#preview-template').html();
+  var template = Handlebars.compile(source);
+  // var $newPreview = $('article.template').clone();
+  // $newPreview.data('project', this.project);
+  // $newPreview.find('h3').html(this.title);
+  // $newPreview.find('p').html(this.shortDesc);
+  // $newPreview.removeClass('template');
+  // console.log('background-image','url(img/projects/' + this.previewImage + ')');
+  return template(this);
 };
 
 PortfolioItem.prototype.updateDetailModal = function(){

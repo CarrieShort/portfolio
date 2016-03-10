@@ -12,6 +12,25 @@
     <link type="text/css" rel="stylesheet" href="styles/module/portfolio-preview.css">
     <link type="text/css" rel="stylesheet" href="styles/state/hover.css">
     <link type="text/css" rel="stylesheet" href="styles/state/sticky.css">
+    <script id="preview-template" type="text/x-handlebars-template">
+      <!-- <article data-category="{{category}}">
+          <header>
+            <h1>{{title}}</h1>
+            <div class="byline">
+              By <address><a href="{{authorUrl}}">{{author}}</a></address>
+             <time pubdate datetime="{{publishedOn}}">{{publishStatus}}</time>
+            </div>
+          </header>
+          <section class="article-body">{{{body}}}</section>
+          <a href="#" class="read-on">Read on &rarr;</a>
+        </article> -->
+        <article class="project-preview" data-project="{{project}}" style="background-image:url(img/projects/{{previewImage}})">
+          <section>
+            <h3>{{title}}</h3>
+            <p>{{shortDesc}}</p>
+          </section>
+        </article>
+    </script>
   </head>
   <body>
     <div class="main-container">
@@ -48,12 +67,12 @@
       </section>
       <section id="portfolio" data-content="portfolio">
         <h2>Portfolio</h2>
-        <article class="template project-preview" data-project="example">
+        <!-- <article class="template project-preview" data-project="example">
           <section>
             <h3>Title</h3>
             <p>Short Description</p>
           </section>
-        </article>
+        </article> -->
         <article class="project-details">
           <h3>Title</h3>
           <img src="" />
@@ -64,6 +83,7 @@
       <footer></footer>
     </div>
     <script src="vendor/scripts/jquery-2.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
     <script src="scripts/portfolioProjects.js"></script>
     <script src="scripts/project.js"></script>
   </body>
