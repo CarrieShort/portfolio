@@ -10,22 +10,19 @@ function PortfolioItem (opts) {
 PortfolioItem.prototype.buildThumbnails = function() {
   var source = $('#preview-template').html();
   var template = Handlebars.compile(source);
-  // var $newPreview = $('article.template').clone();
-  // $newPreview.data('project', this.project);
-  // $newPreview.find('h3').html(this.title);
-  // $newPreview.find('p').html(this.shortDesc);
-  // $newPreview.removeClass('template');
-  // console.log('background-image','url(img/projects/' + this.previewImage + ')');
   return template(this);
 };
 
 PortfolioItem.prototype.updateDetailModal = function(){
-  console.log('updateFunction ran');
-  var $projectDetails = $('article.project-details');
-  $projectDetails.data('project', this.project);
-  $projectDetails.find('h3').html(this.title);
-  $projectDetails.find('.description').html(this.description);
-  return $projectDetails;
+  // console.log('updateFunction ran');
+  // var $projectDetails = $('article.project-details');
+  // $projectDetails.data('project', this.project);
+  // $projectDetails.find('h3').html(this.title);
+  // $projectDetails.find('.description').html(this.description);
+  // return $projectDetails;
+  var source = $('#detail-template').html();
+  var template = Handlebars.compile(source);
+  return template(this);
 };
 
 projectData.sort(function(a,b) {
@@ -44,17 +41,24 @@ projects.forEach(function(a){
 });
 
 $('#portfolio').on('click','.project-preview',function(){
+  $('.project-details').insertAfter($(this));
+
   var $clickedItem = $(this).data('project');
-  var $animatedPreview = $(this).clone();
-  $animatedPreview.addClass('selected');
-  $(this).after($animatedPreview);
-  $('.selected').addClass('move');
+  // var $animatedPreview = $(this).clone();
+  // $animatedPreview.addClass('selected');
+  // $(this).after($animatedPreview);
+  // $('.selected').addClass('move');
+
   projects.forEach(function(a){
     console.log(a.project);
     if(a.project === $clickedItem){
       console.log('match found');
-
-      a.updateDetailModal();
+      $('.project-details').html(a.updateDetailModal());
+      setTimeout(function(){
+        $('.project-details').addClass('expanded');
+      }, 500);
+      // $('.project-details').addClass('expanded');
+      // a.updateDetailModal();
     }
   });
 });
@@ -68,6 +72,11 @@ $('header nav').on('click','li',function(e){
   $('html, body').animate({
     scrollTop: $target.offset().top - 50
   }, 500);
+});
+
+$('.project-details').on('click','.close',function(e){
+  e.preventDefault();
+  $('.project-details').removeClass('expanded');
 });
 
 var $headerPosition = $('header').offset().top;

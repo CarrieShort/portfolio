@@ -13,23 +13,19 @@
     <link type="text/css" rel="stylesheet" href="styles/state/hover.css">
     <link type="text/css" rel="stylesheet" href="styles/state/sticky.css">
     <script id="preview-template" type="text/x-handlebars-template">
-      <!-- <article data-category="{{category}}">
-          <header>
-            <h1>{{title}}</h1>
-            <div class="byline">
-              By <address><a href="{{authorUrl}}">{{author}}</a></address>
-             <time pubdate datetime="{{publishedOn}}">{{publishStatus}}</time>
-            </div>
-          </header>
-          <section class="article-body">{{{body}}}</section>
-          <a href="#" class="read-on">Read on &rarr;</a>
-        </article> -->
         <article class="project-preview" data-project="{{project}}" style="background-image:url(img/projects/{{previewImage}})">
           <section>
             <h3>{{title}}</h3>
             <p>{{shortDesc}}</p>
           </section>
         </article>
+    </script>
+    <script id="detail-template" type="text/x-handlebars-template">
+        <h3>{{title}}</h3>
+        <img src="img/projects/{{previewImage}}" />
+        <p class="completed">{{publishedOn}}</p>
+        <p class="description">{{{description}}}</p>
+        <a class="close"><i class="fa fa-times-circle"></i></a>
     </script>
   </head>
   <body>
@@ -67,18 +63,7 @@
       </section>
       <section id="portfolio" data-content="portfolio">
         <h2>Portfolio</h2>
-        <!-- <article class="template project-preview" data-project="example">
-          <section>
-            <h3>Title</h3>
-            <p>Short Description</p>
-          </section>
-        </article> -->
-        <article class="project-details">
-          <h3>Title</h3>
-          <img src="" />
-          <p class="completed"></p>
-          <p class="description"></p>
-        </article>
+        <article class="project-details"></article>
       </section>
       <footer></footer>
     </div>

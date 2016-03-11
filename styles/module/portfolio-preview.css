@@ -5,7 +5,6 @@
   background-repeat: none;
   cursor: pointer;
   border: 1px solid #ffffff;
-  transition: all 5.4s ease;
 }
 
 .project-preview section{
@@ -20,18 +19,43 @@
   margin: 5px 0;
 }
 
-#portfolio article.project-details {
-width: 100%;
+.project-details{
+  position: absolute;
+  background: rgba(255,255,255,0.9);
+  z-index: 99;
+  left: 0;
+  width: 0;
+  transition: all 0.6s ease;
+  overflow: hidden;
+  padding: 0;
+  visibility: hidden;
 
+}
+.project-details.expanded{
+  right: 0;
+  display: block;
+  width: 100%;
+  padding: 20px;
+  visibility: visible;
+}
+.close{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 2em;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 600px) {
   .project-preview {
     width: 50%;
   }
+  .project-details.expanded{
+    width: 50%;
+  }
 
 }
-
+/*
 .selected {
   position: absolute;
   right: 0;
@@ -52,7 +76,7 @@ width: 100%;
   100% {
      left: 0;
   }
-}
+}*/
 
 @media screen and (min-width: 800px) {
 
