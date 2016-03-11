@@ -14,12 +14,6 @@ PortfolioItem.prototype.buildThumbnails = function() {
 };
 
 PortfolioItem.prototype.updateDetailModal = function(){
-  // console.log('updateFunction ran');
-  // var $projectDetails = $('article.project-details');
-  // $projectDetails.data('project', this.project);
-  // $projectDetails.find('h3').html(this.title);
-  // $projectDetails.find('.description').html(this.description);
-  // return $projectDetails;
   var source = $('#detail-template').html();
   var template = Handlebars.compile(source);
   return template(this);
@@ -31,12 +25,10 @@ projectData.sort(function(a,b) {
 
 projectData.forEach(function(ele) {
   projects.push(new PortfolioItem(ele));
-  console.log('push occured',new PortfolioItem(ele));
 });
 
 
 projects.forEach(function(a){
-  console.log('render happened', a);
   $('#portfolio').append(a.buildThumbnails());
 });
 
@@ -50,9 +42,7 @@ $('#portfolio').on('click','.project-preview',function(){
   // $('.selected').addClass('move');
 
   projects.forEach(function(a){
-    console.log(a.project);
     if(a.project === $clickedItem){
-      console.log('match found');
       $('.project-details').html(a.updateDetailModal());
       setTimeout(function(){
         $('.project-details').addClass('expanded');
@@ -68,7 +58,6 @@ $('header').on('click','*[data-link]',function(e){
   e.preventDefault();
   var $scrollTo = $(this).data('link');
   $target = $('section[data-content="' + $scrollTo + '"]');
-  console.log($target);
   $('html, body').animate({
     scrollTop: $target.offset().top - 50
   }, 500);
@@ -82,14 +71,9 @@ $('.project-details').on('click','.close',function(e){
 var $headerPosition = $('header').offset().top;
 
 var stickyHeader = function() {
-  console.log ($headerPosition);
-  console.log('scroll detected');
-  console.log($(this).scrollTop());
   if($(this).scrollTop() > $headerPosition){
-    console.log('greater');
     $('header').addClass('sticky');
   } else {
-    console.log('less');
     $('header').removeClass('sticky');
   }
 };
