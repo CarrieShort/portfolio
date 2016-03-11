@@ -38,6 +38,9 @@
   padding: 20px;
   visibility: visible;
 }
+.project-details img {
+  max-width: 100%;
+}
 .close{
   position: absolute;
   top: 10px;
@@ -55,28 +58,6 @@
   }
 
 }
-/*
-.selected {
-  position: absolute;
-  right: 0;
-  z-index: 99;
-}
-.move {
-  animation: move 3s ease;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-}
-@keyframes move {
-  0% {
-     right: 0;
-  }
-  50% {
-     left: 50%;
-  }
-  100% {
-     left: 0;
-  }
-}*/
 
 @media screen and (min-width: 800px) {
 
