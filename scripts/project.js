@@ -64,7 +64,7 @@ $('#portfolio').on('click','.project-preview',function(){
 });
 
 
-$('header nav').on('click','li',function(e){
+$('header nav').on('click','li[data-link]',function(e){
   e.preventDefault();
   var $scrollTo = $(this).data('link');
   $target = $('section[data-content="' + $scrollTo + '"]');
