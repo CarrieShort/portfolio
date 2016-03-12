@@ -8,7 +8,6 @@ function detailHandler(){
     projects.forEach(function(a){
       if(a.project === $clickedItem){
         $('.project-details').html(a.updateDetailModal());
-          // $('.project-details').addClass('expanded');
         setTimeout(function(){
           $('.project-details').addClass('expanded');
         }, 100);
