@@ -10,7 +10,7 @@ function detailHandler(){
         $('.project-details').html(a.updateDetailModal());
         setTimeout(function(){
           $('.project-details').addClass('expanded');
-        }, 500);
+        }, 100);
       }
     });
   });
