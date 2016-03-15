@@ -32,20 +32,16 @@ PortfolioItem.loadAll = function(rawData){
 PortfolioItem.fetchAll = function(){
   $.getJSON('data/projects.json', function(rawData, status, xhr){
     var currentEtag = xhr.getResponseHeader('ETag');
-    var storedEtag = localStorage.getItem('etag');
-    console.log(storedEtag === currentEtag, storedEtag, currentEtag);
-    if (localStorage.rawData && storedEtag === currentEtag ) {
+    console.log(localStorage.etag === currentEtag, localStorage.etag, currentEtag);
+    if (localStorage.rawData && localStorage.etag === currentEtag ) {
       console.log('local');
-      var retrievedData = localStorage.getItem('rawData');
-      var parsedJSON = JSON.parse(retrievedData);
-      PortfolioItem.loadAll(parsedJSON);
+      PortfolioItem.loadAll(JSON.parse(localStorage.rawData));
       loadPortfolioPreviews();
     } else {
       console.log('json');
       PortfolioItem.loadAll(rawData);
-      var storedData = JSON.stringify(rawData);
-      localStorage.setItem ('rawData',storedData);
-      localStorage.setItem('etag',currentEtag);
+      localStorage.rawData = JSON.stringify(rawData);
+      localStorage.etag = currentEtag;
       loadPortfolioPreviews();
     }
   });
