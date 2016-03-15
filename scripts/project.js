@@ -21,10 +21,37 @@ PortfolioItem.prototype.updateDetailModal = function(){
   return template(this);
 };
 
-projectData.sort(function(a,b) {
-  return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
-});
+PortfolioItem.loadAll = function(rawData){
+  rawData.sort(function(a,b) {
+    return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
+  });
 
-projectData.forEach(function(ele) {
-  projects.push(new PortfolioItem(ele));
-});
+  rawData.forEach(function(ele) {
+    projects.push(new PortfolioItem(ele));
+  });
+};
+
+PortfolioItem.fetchAll = function(){
+  $.getJSON('data/projects.json', function(rawData, status, xhr){
+    var currentEtag = xhr.getResponseHeader('ETag');
+    var storedEtag = localStorage.getItem('etag');
+    console.log(storedEtag === currentEtag, storedEtag, currentEtag);
+    if (localStorage.rawData && storedEtag === currentEtag ) {
+      console.log('local');
+      var retrievedData = localStorage.getItem('rawData');
+      var parsedJSON = JSON.parse(retrievedData);
+      PortfolioItem.loadAll(parsedJSON);
+      loadPortfolioPreviews();
+    } else {
+      console.log('json');
+
+      storedEtag = xhr.getResponseHeader('ETag');
+      PortfolioItem.loadAll(rawData);
+      var storedData = JSON.stringify(rawData);
+      localStorage.setItem ('rawData',storedData);
+      localStorage.setItem('etag',storedEtag);
+      loadPortfolioPreviews();
+
+    }
+  });
+};

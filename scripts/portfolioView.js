@@ -54,13 +54,13 @@ function toggleMobileMenu(){
 }
 
 function loadPortfolioPreviews(){
-  projects.forEach(function(a){
+  PortfolioItem.all.forEach(function(a){
     $('#portfolio').append(a.buildThumbnails());
   });
 }
 
 $(document).ready(function(){
-  loadPortfolioPreviews();
+  PortfolioItem.fetchAll();
   navHandler();
   detailHandler();
   closeHandler();
