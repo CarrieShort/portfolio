@@ -53,7 +53,14 @@ function toggleMobileMenu(){
   });
 }
 
+function loadPortfolioPreviews(){
+  projects.forEach(function(a){
+    $('#portfolio').append(a.buildThumbnails());
+  });
+}
+
 $(document).ready(function(){
+  loadPortfolioPreviews();
   navHandler();
   detailHandler();
   closeHandler();

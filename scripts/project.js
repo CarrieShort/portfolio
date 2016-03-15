@@ -7,6 +7,8 @@ function PortfolioItem (opts) {
   }
 }
 
+PortfolioItem.all=[];
+
 PortfolioItem.prototype.buildThumbnails = function() {
   var source = $('#preview-template').html();
   var template = Handlebars.compile(source);
@@ -25,9 +27,4 @@ projectData.sort(function(a,b) {
 
 projectData.forEach(function(ele) {
   projects.push(new PortfolioItem(ele));
-});
-
-
-projects.forEach(function(a){
-  $('#portfolio').append(a.buildThumbnails());
 });
