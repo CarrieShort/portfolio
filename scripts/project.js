@@ -44,12 +44,10 @@ PortfolioItem.fetchAll = function(){
       loadPortfolioPreviews();
     } else {
       console.log('json');
-
-      storedEtag = xhr.getResponseHeader('ETag');
       PortfolioItem.loadAll(rawData);
       var storedData = JSON.stringify(rawData);
       localStorage.setItem ('rawData',storedData);
-      localStorage.setItem('etag',storedEtag);
+      localStorage.setItem('etag',currentEtag);
       loadPortfolioPreviews();
 
     }
