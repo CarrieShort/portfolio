@@ -1,11 +1,11 @@
-var projects = [];
-
 // Constructor function for portfolio item
 function PortfolioItem (opts) {
   for (key in opts) {
     this[key] = opts[key];
   }
 }
+
+PortfolioItem.all=[];
 
 PortfolioItem.prototype.buildThumbnails = function() {
   var source = $('#preview-template').html();
@@ -19,15 +19,30 @@ PortfolioItem.prototype.updateDetailModal = function(){
   return template(this);
 };
 
-projectData.sort(function(a,b) {
-  return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
-});
+PortfolioItem.loadAll = function(rawData){
+  rawData.sort(function(a,b) {
+    return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
+  });
 
-projectData.forEach(function(ele) {
-  projects.push(new PortfolioItem(ele));
-});
+  rawData.forEach(function(ele) {
+    PortfolioItem.all.push(new PortfolioItem(ele));
+  });
+};
 
-
-projects.forEach(function(a){
-  $('#portfolio').append(a.buildThumbnails());
-});
+PortfolioItem.fetchAll = function(){
+  $.getJSON('data/projects.json', function(rawData, status, xhr){
+    var currentEtag = xhr.getResponseHeader('ETag');
+    console.log(localStorage.etag === currentEtag, localStorage.etag, currentEtag);
+    if (localStorage.rawData && localStorage.etag === currentEtag ) {
+      console.log('local');
+      PortfolioItem.loadAll(JSON.parse(localStorage.rawData));
+      loadPortfolioPreviews();
+    } else {
+      console.log('json');
+      PortfolioItem.loadAll(rawData);
+      localStorage.rawData = JSON.stringify(rawData);
+      localStorage.etag = currentEtag;
+      loadPortfolioPreviews();
+    }
+  });
+};
