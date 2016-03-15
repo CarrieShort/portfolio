@@ -1,5 +1,3 @@
-var projects = [];
-
 // Constructor function for portfolio item
 function PortfolioItem (opts) {
   for (key in opts) {
@@ -27,7 +25,7 @@ PortfolioItem.loadAll = function(rawData){
   });
 
   rawData.forEach(function(ele) {
-    projects.push(new PortfolioItem(ele));
+    PortfolioItem.all.push(new PortfolioItem(ele));
   });
 };
 
@@ -49,7 +47,6 @@ PortfolioItem.fetchAll = function(){
       localStorage.setItem ('rawData',storedData);
       localStorage.setItem('etag',currentEtag);
       loadPortfolioPreviews();
-
     }
   });
 };

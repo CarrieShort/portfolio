@@ -5,7 +5,7 @@ function detailHandler(){
   $('#portfolio').on('click','.project-preview',function(){
     $('.project-details').insertAfter($(this));
     var $clickedItem = $(this).data('project');
-    projects.forEach(function(a){
+    PortfolioItem.all.forEach(function(a){
       if(a.project === $clickedItem){
         $('.project-details').html(a.updateDetailModal());
         setTimeout(function(){
@@ -54,7 +54,7 @@ function toggleMobileMenu(){
 }
 
 function loadPortfolioPreviews(){
-  projects.forEach(function(a){
+  PortfolioItem.all.forEach(function(a){
     $('#portfolio').append(a.buildThumbnails());
   });
 }
