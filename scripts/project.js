@@ -5,8 +5,6 @@ function PortfolioItem (opts) {
   }
 }
 
-PortfolioItem.all=[];
-
 PortfolioItem.prototype.buildThumbnails = function() {
   var source = $('#preview-template').html();
   var template = Handlebars.compile(source);
@@ -24,8 +22,8 @@ PortfolioItem.loadAll = function(rawData){
     return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
   });
 
-  rawData.forEach(function(ele) {
-    PortfolioItem.all.push(new PortfolioItem(ele));
+  PortfolioItem.all = rawData.map(function(ele) {
+    return new PortfolioItem(ele);
   });
 };
 
