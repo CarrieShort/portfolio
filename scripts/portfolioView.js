@@ -54,7 +54,7 @@ function toggleMobileMenu(){
 }
 
 function loadPortfolioPreviews(){
-  PortfolioItem.all.forEach(function(a){
+  projects.forEach(function(a){
     $('#portfolio').append(a.buildThumbnails());
   });
 }
