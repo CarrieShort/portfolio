@@ -45,5 +45,6 @@
       }
     });
   };
+
   module.PortfolioItem = PortfolioItem;
 })(window);
