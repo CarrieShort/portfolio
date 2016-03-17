@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Carrie Short - Web Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="vendor/styles/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/base/reset.css">
+    <link type="text/css" rel="stylesheet" href="styles/base/default.css">
+    <link type="text/css" rel="stylesheet" href="styles/layout.css">
+    <link type="text/css" rel="stylesheet" href="styles/module/header.css">
+    <link type="text/css" rel="stylesheet" href="styles/module/banner.css">
+    <link type="text/css" rel="stylesheet" href="styles/module/portfolio-preview.css">
+    <link type="text/css" rel="stylesheet" href="styles/state/hover.css">
+    <link type="text/css" rel="stylesheet" href="styles/state/sticky.css">
+    <script id="preview-template" type="text/x-handlebars-template">
+        <article class="project-preview" data-project="{{project}}" style="background-image:url(img/projects/{{previewImage}})">
+          <section>
+            <h3>{{title}}</h3>
+            <p>{{shortDesc}}</p>
+          </section>
+        </article>
+    </script>
+    <script id="detail-template" type="text/x-handlebars-template">
+        <h3>{{title}}</h3>
+        <img src="img/projects/{{previewImage}}" />
+        <p class="completed">{{publishedOn}}</p>
+        <p class="description">{{{description}}}</p>
+        <a class="close"><i class="fa fa-times-circle"></i></a>
+    </script>
+  </head>
+  <body>
+    <div class="main-container">
+      <header>
+        <h1><a href="#" data-link="overview">Carrie <span></span> Short</a></h1>
+        <nav>
+          <a href="#" class="mobile-menu"><i class="fa fa-bars"></i></a>
+          <ul>
+            <li data-link="about"><a href="#">About</a></li>
+            <li data-link="history"><a href="#">History</a></li>
+            <li data-link="skills"><a href="#">Skills</a></li>
+            <li data-link="portfolio"><a href="#">Portfolio</a></li>
+            <li><a href="https://github.com/CarrieShort"><i class="fa fa-github"></i></a></li>
+          </ul>
+        </nav>
+      </header>
+      <section class="banner" data-content="overview">
+        <ul>
+          <li>UX/UI</li>
+          <li>Visual Design</li>
+          <li class="next-line">HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li class="next-line">jQuery</li>
+          <li>Ajax</li>
+          <li>React</li>
+          <li>Angular</li>
+        </ul>
+      </section>
+      <section data-content="about">
+        <h2>About</h2>
+        <p>Attack feet present belly, scratch hand when stroked or sit by the fire and intently sniff hand, or swat turds around the house. Meow for food, then when human fills food dish, take a few bites of food and continue meowing steal the warm chair right after you get up sit by the fire behind the couch lick plastic bags, for jump around on couch, meow constantly until given food, so throwup on your pillow. Russian blue eat grass, throw it back up yet eat the fat cats food and refuse to leave cardboard box purr for no reason. Bathe private parts with tongue then lick owner's face ignore the squirrels, you'll never catch them anyway immediately regret falling into bathtub chirp at birds so pee in the shoe. Lick yarn hanging out of own butt find something else more interesting attack the dog then pretend like nothing happened poop in litter box, scratch the walls and lay on arms while you're using the keyboard lick arm hair, run outside as soon as door open. </p>
+        <p>Shove bum in owner's face like camera lens chew on cable where is my slave? I'm getting hungry cat is love, cat is life lay on arms while you're using the keyboard vommit food and eat it again. Give attitude. Lounge in doorway poop in litter box, scratch the walls so give attitude plan steps for world domination stare out the window eat prawns daintily with a claw then lick paws clean wash down prawns with a lap of carnation milk then retire to the warmest spot on the couch to claw at the fabric before taking a catnap and where is my slave? I'm getting hungry. Intently stare at the same spot sleep on keyboard. Kitty power! plan steps for world domination ears back wide eyed you call this cat food? but sit by the fire or meowwww. Stick butt in face refuse to leave cardboard box, shove bum in owner's face like camera lens climb a tree, wait for a fireman jump to fireman then scratch his face yet scratch at the door then walk away throwup on your pillow, so stare at ceiling light.</p>
+      </section>
+      <section id="portfolio" data-content="portfolio">
+        <h2>Portfolio</h2>
+        <article class="project-details"></article>
+      </section>
+      <section data-content="skills">
+        <h2>Skills</h2>
+        <p>Attack feet present belly, scratch hand when stroked or sit by the fire and intently sniff hand, or swat turds around the house. Meow for food, then when human fills food dish, take a few bites of food and continue meowing steal the warm chair right after you get up sit by the fire behind the couch lick plastic bags, for jump around on couch, meow constantly until given food, so throwup on your pillow. Russian blue eat grass, throw it back up yet eat the fat cats food and refuse to leave cardboard box purr for no reason. Bathe private parts with tongue then lick owner's face ignore the squirrels, you'll never catch them anyway immediately regret falling into bathtub chirp at birds so pee in the shoe. Lick yarn hanging out of own butt find something else more interesting attack the dog then pretend like nothing happened poop in litter box, scratch the walls and lay on arms while you're using the keyboard lick arm hair, run outside as soon as door open. </p>
+        <p>Shove bum in owner's face like camera lens chew on cable where is my slave? I'm getting hungry cat is love, cat is life lay on arms while you're using the keyboard vommit food and eat it again. Give attitude. Lounge in doorway poop in litter box, scratch the walls so give attitude plan steps for world domination stare out the window eat prawns daintily with a claw then lick paws clean wash down prawns with a lap of carnation milk then retire to the warmest spot on the couch to claw at the fabric before taking a catnap and where is my slave? I'm getting hungry. Intently stare at the same spot sleep on keyboard. Kitty power! plan steps for world domination ears back wide eyed you call this cat food? but sit by the fire or meowwww. Stick butt in face refuse to leave cardboard box, shove bum in owner's face like camera lens climb a tree, wait for a fireman jump to fireman then scratch his face yet scratch at the door then walk away throwup on your pillow, so stare at ceiling light.</p>
+      </section>
+      <section data-content="history">
+        <h2>History</h2>
+        <p>Attack feet present belly, scratch hand when stroked or sit by the fire and intently sniff hand, or swat turds around the house. Meow for food, then when human fills food dish, take a few bites of food and continue meowing steal the warm chair right after you get up sit by the fire behind the couch lick plastic bags, for jump around on couch, meow constantly until given food, so throwup on your pillow. Russian blue eat grass, throw it back up yet eat the fat cats food and refuse to leave cardboard box purr for no reason. Bathe private parts with tongue then lick owner's face ignore the squirrels, you'll never catch them anyway immediately regret falling into bathtub chirp at birds so pee in the shoe. Lick yarn hanging out of own butt find something else more interesting attack the dog then pretend like nothing happened poop in litter box, scratch the walls and lay on arms while you're using the keyboard lick arm hair, run outside as soon as door open. </p>
+        <p>Shove bum in owner's face like camera lens chew on cable where is my slave? I'm getting hungry cat is love, cat is life lay on arms while you're using the keyboard vommit food and eat it again. Give attitude. Lounge in doorway poop in litter box, scratch the walls so give attitude plan steps for world domination stare out the window eat prawns daintily with a claw then lick paws clean wash down prawns with a lap of carnation milk then retire to the warmest spot on the couch to claw at the fabric before taking a catnap and where is my slave? I'm getting hungry. Intently stare at the same spot sleep on keyboard. Kitty power! plan steps for world domination ears back wide eyed you call this cat food? but sit by the fire or meowwww. Stick butt in face refuse to leave cardboard box, shove bum in owner's face like camera lens climb a tree, wait for a fireman jump to fireman then scratch his face yet scratch at the door then walk away throwup on your pillow, so stare at ceiling light.</p>
+      </section>
+      <footer></footer>
+    </div>
+    <script src="vendor/scripts/jquery-2.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+    <script src="scripts/project.js"></script>
+    <script src="scripts/portfolioView.js"></script>
+  </body>
+</html>
