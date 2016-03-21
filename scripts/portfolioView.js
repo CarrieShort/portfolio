@@ -19,7 +19,7 @@
       var $clickedItem = $(this).data('project');
       PortfolioItem.all.forEach(function(a){
         if(a.project === $clickedItem){
-          $('.project-details').html(a.updateDetailModal());
+          $('.project-details').html(a.compileToHtml('#detail-template'));
           setTimeout(function(){
             $('.project-details').addClass('expanded');
           }, 100);
@@ -58,7 +58,7 @@
 
   portfolioView.loadPortfolioPreviews = function(){
     PortfolioItem.all.forEach(function(a){
-      $('#portfolio').append(a.buildThumbnails());
+      $('#portfolio').append(a.compileToHtml('#preview-template'));
     });
   };
 
