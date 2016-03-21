@@ -15,16 +15,14 @@
   // on click build detailed view of project
   portfolioView.detailHandler = function (){
     $('#portfolio').on('click','.project-preview',function(){
-      $('.project-details').insertAfter($(this));
       var $clickedItem = $(this).data('project');
-      PortfolioItem.all.forEach(function(a){
-        if(a.project === $clickedItem){
-          $('.project-details').html(a.compileToHtml('#detail-template'));
-          setTimeout(function(){
-            $('.project-details').addClass('expanded');
-          }, 100);
-        }
+      var matchedProject = PortfolioItem.all.filter(function(portfolioItem){
+        return portfolioItem.project === $clickedItem;
       });
+      // .show() is necessary for css animation to work without a delay. The element needs to render before a css animation can be applied. Show forces the render.
+      $('.project-details').insertAfter($(this)).show();
+      $('.project-details').html(matchedProject[0].compileToHtml('#detail-template'));
+      $('.project-details').addClass('expanded');
     });
   };
 
