@@ -65,6 +65,9 @@ header nav ul li a {
 	header nav{
 		width: auto;
 	}
+	header nav ul[style]{
+		display: block!important;
+	}
 	.mobile-menu {
 		display: none;
 	}
