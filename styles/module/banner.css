@@ -5,16 +5,16 @@
 	align-items: flex-end;
 	height: 300px;
 }
+
 .banner ul {
 	display: none;
 }
-
-.next-line {clear: both;}
 
 @media screen and (min-width: 760px) {
 	.banner ul {
 		display: block;
 	}
+
 	.banner ul li {
 		display: block;
 		border: 1px solid #ffffff;
@@ -28,8 +28,12 @@
 		float: left;
 		font-size: 1.3em;
 	}
+
 	.banner {
 		height: 600px;
 	}
 
+	.banner ul li:nth-child(3), .banner ul li:nth-child(6){
+		clear:both;
+	}
 }

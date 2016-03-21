@@ -18,7 +18,7 @@
     "description": "<p>Bacon ipsum dolor amet do ex andouille minim, kielbasa consectetur t-bone. Ullamco alcatra deserunt, occaecat sed drumstick prosciutto. Cupim sed ullamco cow ham hock turkey pariatur. Officia landjaeger minim, tenderloin salami ribeye cupidatat.</p>"
   },{
     "title": "Game Closet",
-    "project": "game-closet",
+    "project": "game-closet-2",
     "previewImage": "preview-game-closet.png",
     "shortDesc": "I show up on hover",
     "publishedOn": "2014-03-05",
@@ -27,7 +27,7 @@
   },
   {
     "title": "Social Circle",
-    "project": "social-circle",
+    "project": "social-circle-2",
     "previewImage": "preview-social-circle.png",
     "shortDesc": "I show up on hover",
     "publishedOn": "2015-05-09",

@@ -6,15 +6,8 @@
     }
   }
 
-  PortfolioItem.prototype.buildThumbnails = function() {
-    var source = $('#preview-template').html();
-    var template = Handlebars.compile(source);
-    return template(this);
-  };
-
-  PortfolioItem.prototype.updateDetailModal = function(){
-    var source = $('#detail-template').html();
-    var template = Handlebars.compile(source);
+  PortfolioItem.prototype.compileToHtml = function(source){
+    var template = Handlebars.compile($(source).html());
     return template(this);
   };
 
