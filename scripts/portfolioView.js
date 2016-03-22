@@ -26,18 +26,6 @@
     });
   };
 
-  // on click scroll to matching section
-  portfolioView.navHandler = function(){
-    $('header').on('click','*[data-link]',function(e){
-      e.preventDefault();
-      var $scrollTo = $(this).data('link');
-      $target = $('section[data-content="' + $scrollTo + '"]');
-      $('html, body').animate({
-        scrollTop: $target.offset().top - 50
-      }, 500);
-    });
-  };
-
   // on click close detail view
   portfolioView.closeHandler = function(){
     $('.project-details').on('click','.close',function(e){
@@ -78,7 +66,6 @@
 
   $(document).ready(function(){
     PortfolioItem.fetchAll();
-    portfolioView.navHandler();
     portfolioView.detailHandler();
     portfolioView.closeHandler();
     portfolioView.toggleMobileMenu();
