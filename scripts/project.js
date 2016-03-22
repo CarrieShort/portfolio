@@ -12,6 +12,7 @@
   };
 
   PortfolioItem.loadAll = function(rawData){
+    console.log('this is my array', rawData);
     rawData.sort(function(a,b) {
       return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
     });
