@@ -16,23 +16,25 @@
   portfolioView.detailHandler = function (){
     $('#portfolio').on('click','.project-preview',function(){
       var $clickedItem = $(this).data('project');
+
+      // console.log('portfoliosRepo',portfoliosRepo);
       var matchedProject = PortfolioItem.all.filter(function(portfolioItem){
         return portfolioItem.project === $clickedItem;
       });
-      // .show() is necessary for css animation to work without a delay. The element needs to render before a css animation can be applied. Show forces the render.
       $('.project-details').insertAfter($(this)).show();
       $('.project-details').html(matchedProject[0].compileToHtml('#detail-template'));
       $('.project-details').addClass('expanded');
     });
+    closeHandler();
   };
 
-  // on click close detail view
-  portfolioView.closeHandler = function(){
+  // on click close detail view helper
+  function closeHandler(){
     $('.project-details').on('click','.close',function(e){
       e.preventDefault();
       $('.project-details').removeClass('expanded');
     });
-  };
+  }
 
   // toggle mobile menu
   portfolioView.toggleMobileMenu = function(){
@@ -64,13 +66,13 @@
     $('footer').append('<p>There are ' + palindromeCount + ' palindromes on this page. They are : ' + uniquePalindromes.join(', '));
   };
 
-  $(document).ready(function(){
+  portfolioView.initPortfolio = function(){
     PortfolioItem.fetchAll();
     portfolioView.detailHandler();
-    portfolioView.closeHandler();
     portfolioView.toggleMobileMenu();
     portfolioView.funFacts();
     $(window).scroll(stickyHeader);
-  });
+  };
+
   module.portfolioView = portfolioView;
 })(window);
