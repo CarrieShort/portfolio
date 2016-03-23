@@ -4,7 +4,8 @@
   "description": "portfolio of personal projects",
   "main": "server.js",
   "dependencies": {
-    "express": "^4.13.4"
+    "express": "^4.13.4",
+    "express-request-proxy": "^1.0.10"
   },
   "devDependencies": {},
   "scripts": {
