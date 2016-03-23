@@ -7,8 +7,8 @@
   };
 
   repoView.index = function() {
-    
-    $('#repo').append(
+
+    $('#repo ul').append(
       repos.with('name').map(render)
     );
   };
