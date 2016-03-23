@@ -2,6 +2,7 @@
   {
     "title": "Broom Game Closet",
     "project": "game-closet",
+    "github": "game-closet",
     "previewImage": "preview-game-closet.png",
     "shortDesc": "I show up on hover",
     "publishedOn": "2016-03-05",
@@ -11,6 +12,7 @@
   {
     "title": "Social Circle",
     "project": "social-circle",
+    "github": "socialCircle",
     "previewImage": "preview-social-circle.png",
     "shortDesc": "I show up on hover",
     "publishedOn": "2015-05-09",
@@ -19,6 +21,7 @@
   },{
     "title": "Game Closet",
     "project": "game-closet-2",
+    "github": "game-closet",
     "previewImage": "preview-game-closet.png",
     "shortDesc": "I show up on hover",
     "publishedOn": "2014-03-05",
@@ -28,6 +31,7 @@
   {
     "title": "Social Circle",
     "project": "social-circle-2",
+    "github": "socialCircle",
     "previewImage": "preview-social-circle.png",
     "shortDesc": "I show up on hover",
     "publishedOn": "2015-05-09",

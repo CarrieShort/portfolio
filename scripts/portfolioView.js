@@ -16,6 +16,8 @@
   portfolioView.detailHandler = function (){
     $('#portfolio').on('click','.project-preview',function(){
       var $clickedItem = $(this).data('project');
+
+      // console.log('portfoliosRepo',portfoliosRepo);
       var matchedProject = PortfolioItem.all.filter(function(portfolioItem){
         return portfolioItem.project === $clickedItem;
       });
@@ -69,9 +71,8 @@
     portfolioView.detailHandler();
     portfolioView.toggleMobileMenu();
     portfolioView.funFacts();
-    repoController.index();
     $(window).scroll(stickyHeader);
   };
-  
+
   module.portfolioView = portfolioView;
 })(window);

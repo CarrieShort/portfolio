@@ -1,27 +1,35 @@
 (function(module) {
-  var repos = {};
+  var reposStats = {};
 
-  repos.all = [];
+  reposStats.all = [];
 
-  repos.requestRepos = function(callback) {
+  reposStats.requestRepos = function(repo,callback) {
+    console.log('repo fired');
     $.ajax({
-      url: 'https://api.github.com/users/carrieshort/repos' + '?per_page=5&sort=updated',
+      url: 'https://api.github.com/repos/carrieshort/' + repo + '/stats/contributors',
       type: 'GET',
       headers: {
         'Authorization': 'token ' + githubToken
       },
       success: function(data, message, xhr) {
-        repos.all = data;
-        callback();
+        reposStats.all = data;
+        var filteredRepos = reposStats.all.map(function(ele){
+          var userStats = {};
+          userStats.name = ele.author.login;
+          userStats.url = ele.author.html_url;
+          userStats.commits = ele.total;
+          return userStats;
+        });
+        callback(filteredRepos);
       }
     });
   };
-  
-  repos.with = function(attr) {
-    return repos.all.filter(function(repo) {
+
+  reposStats.with = function(attr) {
+    return reposStats.all.filter(function(repo) {
       return repo[attr];
     });
   };
 
-  module.repos = repos;
+  module.reposStats = reposStats;
 })(window);
