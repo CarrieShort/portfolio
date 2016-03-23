@@ -22,9 +22,7 @@
 
     PortfolioItem.allPlus = PortfolioItem.all.map(function(item){
       var stats = reposStats.requestRepos(item.github,function(array){
-        // console.log('array of data',array, item);
         item.contributors = array;
-        console.log('the modded item',item);
       });
       return item;
     });
