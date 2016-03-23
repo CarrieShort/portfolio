@@ -18,26 +18,6 @@
       });
       callback(filteredRepos);
     });
-
-    // console.log('repo fired');
-    // $.ajax({
-    //   url: 'https://api.github.com/repos/carrieshort/' + repo + '/stats/contributors',
-    //   type: 'GET',
-    //   headers: {
-    //     'Authorization': 'token ' + githubToken
-    //   },
-    //   success: function(data, message, xhr) {
-    //     reposStats.all = data;
-    //     var filteredRepos = reposStats.all.map(function(ele){
-    //       var userStats = {};
-    //       userStats.name = ele.author.login;
-    //       userStats.url = ele.author.html_url;
-    //       userStats.commits = ele.total;
-    //       return userStats;
-    //     });
-    //     callback(filteredRepos);
-    //   }
-    // });
   };
 
   reposStats.with = function(attr) {
