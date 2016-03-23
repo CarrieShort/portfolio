@@ -70,6 +70,7 @@
     portfolioView.closeHandler();
     portfolioView.toggleMobileMenu();
     portfolioView.funFacts();
+    repoController.index();
     $(window).scroll(stickyHeader);
   });
   module.portfolioView = portfolioView;

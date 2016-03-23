@@ -12,7 +12,6 @@
   };
 
   PortfolioItem.loadAll = function(rawData){
-    console.log('this is my array', rawData);
     rawData.sort(function(a,b) {
       return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
     });
@@ -25,13 +24,10 @@
   PortfolioItem.fetchAll = function(){
     $.getJSON('data/projects.json', function(rawData, status, xhr){
       var currentEtag = xhr.getResponseHeader('ETag');
-      console.log(localStorage.etag === currentEtag, localStorage.etag, currentEtag);
       if (localStorage.rawData && localStorage.etag === currentEtag ) {
-        console.log('local');
         PortfolioItem.loadAll(JSON.parse(localStorage.rawData));
         portfolioView.loadPortfolioPreviews();
       } else {
-        console.log('json');
         PortfolioItem.loadAll(rawData);
         localStorage.rawData = JSON.stringify(rawData);
         localStorage.etag = currentEtag;
