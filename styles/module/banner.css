@@ -1,0 +1,39 @@
+.banner {
+	background:url('../../img/banner.jpg') no-repeat;
+	background-size: cover;
+	display: flex;
+	align-items: flex-end;
+	height: 300px;
+}
+
+.banner ul {
+	display: none;
+}
+
+@media screen and (min-width: 760px) {
+	.banner ul {
+		display: block;
+	}
+
+	.banner ul li {
+		display: block;
+		border: 1px solid #ffffff;
+		width: 145px;
+		height: 145px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: #fff;
+		margin: 5px;
+		float: left;
+		font-size: 1.3em;
+	}
+
+	.banner {
+		height: 600px;
+	}
+
+	.banner ul li:nth-child(3), .banner ul li:nth-child(6){
+		clear:both;
+	}
+}

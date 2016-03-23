@@ -1,0 +1,67 @@
+/* Portfolio Preview */
+
+.project-preview {
+  background-size: 100%;
+  background-repeat: none;
+  cursor: pointer;
+  border: 1px solid #ffffff;
+}
+
+.project-preview section{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(61, 211, 178, 0.8);
+  display: block;
+  padding: 10px;
+}
+.project-preview section p {
+  margin: 5px 0;
+}
+
+.project-details{
+  position: absolute;
+  background: rgba(255,255,255,0.9);
+  z-index: 99;
+  left: 0;
+  width: 0;
+  transition: all 0.6s ease;
+  padding:20px;
+  margin-left: -100%;
+  width: 100%;
+  left: 0;
+
+
+}
+.project-details.expanded{
+  margin:0;
+}
+.project-details img {
+  max-width: 100%;
+}
+.close{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 600px) {
+  .project-preview {
+    width: 50%;
+  }
+  .project-details{
+    width: 50%;
+    margin-left: -50%;
+  }
+
+}
+
+@media screen and (min-width: 800px) {
+
+  .project-preview section{
+    display: none;
+  }
+
+}
