@@ -21,5 +21,11 @@
 .experience article {
   border: 1px solid #ffffff;
   padding: 20px;
-  width: 28%;
+  width: 100%;
+}
+
+@media screen and (min-width: 800px) {
+  .experience article {
+    width: 28%;
+  }
 }
