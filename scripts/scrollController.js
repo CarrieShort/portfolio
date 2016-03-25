@@ -1,7 +1,6 @@
 (function(module) {
   var scrollController = {};
-  portfolioView.initPortfolio();
-
+  
   scrollController.subpages = function(ctx,next) {
     $target = $('section[data-content="' + ctx.params.content + '"]');
     $('html, body').animate({

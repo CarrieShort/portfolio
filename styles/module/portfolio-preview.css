@@ -6,6 +6,9 @@
   cursor: pointer;
   border: 1px solid #ffffff;
 }
+.project-preview img {
+  width: 100%;
+}
 
 .project-preview section{
   position: absolute;
@@ -21,7 +24,7 @@
 
 .project-details{
   position: absolute;
-  background: rgba(255,255,255,0.9);
+  background: rgba(255,255,255,1);
   z-index: 99;
   left: 0;
   width: 0;
@@ -30,15 +33,17 @@
   margin-left: -100%;
   width: 100%;
   left: 0;
-
-
+  border:1px solid #efefef;
 }
+
 .project-details.expanded{
   margin:0;
 }
+
 .project-details img {
   max-width: 100%;
 }
+
 .close{
   position: absolute;
   top: 10px;
@@ -55,13 +60,10 @@
     width: 50%;
     margin-left: -50%;
   }
-
 }
 
 @media screen and (min-width: 800px) {
-
   .project-preview section{
     display: none;
   }
-
 }

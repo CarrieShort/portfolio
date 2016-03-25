@@ -1,41 +1,24 @@
 [
   {
-    "title": "Broom Game Closet",
-    "project": "game-closet",
-    "github": "game-closet",
-    "previewImage": "preview-game-closet.png",
-    "shortDesc": "I show up on hover",
-    "publishedOn": "2016-03-05",
-    "detailedLink": "portfolio/projecturl.html",
-    "description": "<p>Bacon ipsum dolor amet do ex andouille minim, kielbasa consectetur t-bone. Ullamco alcatra deserunt, occaecat sed drumstick prosciutto. Cupim sed ullamco cow ham hock turkey pariatur. Officia landjaeger minim, tenderloin salami ribeye cupidatat. Consequat reprehenderit shank nostrud proident shoulder mollit flank. Excepteur quis occaecat kevin officia, ribeye sausage chuck et pig.</p><p><img src=\"http://baconmockup.com/600/300/\" class=\"pull-right\" > Cupidatat pancetta chuck fugiat shankle dolor drumstick excepteur spare ribs duis. Meatloaf beef ribs et picanha eu in qui dolore tongue enim spare ribs capicola est pork chop swine. Ipsum strip steak nostrud ham hock qui irure. <img src=\"http://baconmockup.com/300/400/\" class=\"pull-right\">Picanha occaecat prosciutto, rump tempor jerky proident voluptate short loin jowl.</p>"
-  },
-  {
-    "title": "Social Circle",
-    "project": "social-circle",
-    "github": "socialCircle",
-    "previewImage": "preview-social-circle.png",
-    "shortDesc": "I show up on hover",
-    "publishedOn": "2015-05-09",
-    "detailedLink": "portfolio/projecturl.html",
-    "description": "<p>Bacon ipsum dolor amet do ex andouille minim, kielbasa consectetur t-bone. Ullamco alcatra deserunt, occaecat sed drumstick prosciutto. Cupim sed ullamco cow ham hock turkey pariatur. Officia landjaeger minim, tenderloin salami ribeye cupidatat.</p>"
-  },{
     "title": "Game Closet",
-    "project": "game-closet-2",
     "github": "game-closet",
     "previewImage": "preview-game-closet.png",
-    "shortDesc": "I show up on hover",
-    "publishedOn": "2014-03-05",
-    "detailedLink": "portfolio/projecturl.html",
-    "description": "<p>Bacon ipsum dolor amet do ex andouille minim, kielbasa consectetur t-bone. Ullamco alcatra deserunt, occaecat sed drumstick prosciutto. Cupim sed ullamco cow ham hock turkey pariatur. Officia landjaeger minim, tenderloin salami ribeye cupidatat. Consequat reprehenderit shank nostrud proident shoulder mollit flank. Excepteur quis occaecat kevin officia, ribeye sausage chuck et pig.</p><p><img src=\"http://baconmockup.com/600/300/\" class=\"pull-right\" > Cupidatat pancetta chuck fugiat shankle dolor drumstick excepteur spare ribs duis. Meatloaf beef ribs et picanha eu in qui dolore tongue enim spare ribs capicola est pork chop swine. Ipsum strip steak nostrud ham hock qui irure. <img src=\"http://baconmockup.com/300/400/\" class=\"pull-right\">Picanha occaecat prosciutto, rump tempor jerky proident voluptate short loin jowl.</p>"
+    "shortDesc": "Create a custom digital collection of your board games that you can search and filter!",
+    "publishedOn": "2016-03-05",
+    "githubLink": "https://github.com/CarrieShort/portfolio",
+    "demoLink": "http://carrieshort.github.io/game-closet/",
+    "technology": "HTML, CSS, JavaScript, LocalStorage",
+    "description": "<p>Using only vanilla JavaScript we created a mobile friendly website that lets you create a customized digitial collection of board games by selecting from a pre-populated set. You can also search through this set of board games, or choose a random board game from your collection</p>"
   },
   {
     "title": "Social Circle",
-    "project": "social-circle-2",
     "github": "socialCircle",
     "previewImage": "preview-social-circle.png",
-    "shortDesc": "I show up on hover",
+    "shortDesc": "jQuery plugin for hiding and revealing your social icons in a circular layout.",
     "publishedOn": "2015-05-09",
-    "detailedLink": "portfolio/projecturl.html",
-    "description": "<p>Bacon ipsum dolor amet do ex andouille minim, kielbasa consectetur t-bone. Ullamco alcatra deserunt, occaecat sed drumstick prosciutto. Cupim sed ullamco cow ham hock turkey pariatur. Officia landjaeger minim, tenderloin salami ribeye cupidatat.</p>"
+    "githubLink": "https://github.com/CarrieShort/socialCircle",
+    "demoLink": "http://carrieshort.github.io/socialCircle/",
+    "technology": "HTML, CSS, JavaScript, LocalStorage",
+    "description": "<p>SocialCircle is a jQuery plugin that allows the user to reveal and hide radial social share buttons with a toggle button. Also can be used to create a radial popup menu for your website navigation.</p><p>You can alter the following settings of the plugin:</p><ul><li>rotate: rotate the icons around the circle by degrees</li><li>radius: set how far out the icons generate</li><li>circleSize: 1 is a full circle, 0.5 is half circle</li><li>Speed: sets animation speed</li></ul>"
   }
 ]

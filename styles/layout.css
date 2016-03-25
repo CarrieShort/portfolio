@@ -24,9 +24,3 @@ section {
   position: relative;
   width: 100%;
 }
-
-.project-preview:before{
-	content: "";
-	display: block;
-	padding-top: 54%; 	/* fixed aspect ratio */
-}

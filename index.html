@@ -9,11 +9,14 @@
     <link type="text/css" rel="stylesheet" href="styles/layout.css">
     <link type="text/css" rel="stylesheet" href="styles/module/header.css">
     <link type="text/css" rel="stylesheet" href="styles/module/banner.css">
+    <link type="text/css" rel="stylesheet" href="styles/module/history.css">
+    <link type="text/css" rel="stylesheet" href="styles/module/experience.css">
     <link type="text/css" rel="stylesheet" href="styles/module/portfolio-preview.css">
     <link type="text/css" rel="stylesheet" href="styles/state/hover.css">
     <link type="text/css" rel="stylesheet" href="styles/state/sticky.css">
     <script id="preview-template" type="text/x-handlebars-template">
-        <article class="project-preview" data-project="{{project}}" style="background-image:url(img/projects/{{previewImage}})">
+        <article class="project-preview" data-project="{{github}}">
+          <img src="img/projects/{{previewImage}}" />
           <section>
             <h3>{{title}}</h3>
             <p>{{shortDesc}}</p>
@@ -23,28 +26,19 @@
     <script id="detail-template" type="text/x-handlebars-template">
         <h3>{{title}}</h3>
         <img src="img/projects/{{previewImage}}" />
-        <p class="completed">{{publishedOn}}</p>
+        <p>{{publishedOn}}</p>
+        <p><a href="{{githubLink}}">View on github</a></p>
         {{#if contributors}}
         <h4>Contributors</h4>
           <ul>
           {{#each contributors}}
           <li><a href="{{url}}">{{name}}</a>: {{commits}} commits</li>
           {{/each}}
+        </ul>
         {{/if}}
-        <p class="description">{{{description}}}</p>
+        {{{description}}}
+        <p><a class="button" href="{{demoLink}}">Demo</a></p>
         <a class="close"><i class="fa fa-times-circle"></i></a>
-    </script>
-    <script id="repo-template" type="text/x-handlebars-template">
-      <li>
-        <a href="{{html_url}}" target="_blank"><h3>{{name}}</h3></a>
-        <p>Description: {{description}}</p>
-        <p>Language: {{language}}</p>
-        <p>Created: {{created_at}}</p>
-        <p>Last updated: {{updated_at}}</p>
-        {{#if watchers_count}}
-          <p>{{watchers_count}} watching this repo</p>
-        {{/if}}
-      </li>
     </script>
   </head>
   <body>
@@ -56,7 +50,7 @@
           <ul>
             <li><a href="about">About</a></li>
             <li><a href="history">History</a></li>
-            <li><a href="skills">Skills</a></li>
+            <li><a href="skills">Experience</a></li>
             <li><a href="portfolio">Portfolio</a></li>
             <li><a href="https://github.com/CarrieShort"><i class="fa fa-github"></i></a></li>
           </ul>
@@ -77,22 +71,58 @@
       </section>
       <section data-content="about">
         <h2>About</h2>
-        <p>Attack feet present belly, scratch hand when stroked or sit by the fire and intently sniff hand, or swat turds around the house. Meow for food, then when human fills food dish, take a few bites of food and continue meowing steal the warm chair right after you get up sit by the fire behind the couch lick plastic bags, for jump around on couch, meow constantly until given food, so throwup on your pillow. Russian blue eat grass, throw it back up yet eat the fat cats food and refuse to leave cardboard box purr for no reason. Bathe private parts with tongue then lick owner's face ignore the squirrels, you'll never catch them anyway immediately regret falling into bathtub chirp at birds so pee in the shoe. Lick yarn hanging out of own butt find something else more interesting attack the dog then pretend like nothing happened poop in litter box, scratch the walls and lay on arms while you're using the keyboard lick arm hair, run outside as soon as door open. </p>
-        <p>Shove bum in owner's face like camera lens chew on cable where is my slave? I'm getting hungry cat is love, cat is life lay on arms while you're using the keyboard vommit food and eat it again. Give attitude. Lounge in doorway poop in litter box, scratch the walls so give attitude plan steps for world domination stare out the window eat prawns daintily with a claw then lick paws clean wash down prawns with a lap of carnation milk then retire to the warmest spot on the couch to claw at the fabric before taking a catnap and where is my slave? I'm getting hungry. Intently stare at the same spot sleep on keyboard. Kitty power! plan steps for world domination ears back wide eyed you call this cat food? but sit by the fire or meowwww. Stick butt in face refuse to leave cardboard box, shove bum in owner's face like camera lens climb a tree, wait for a fireman jump to fireman then scratch his face yet scratch at the door then walk away throwup on your pillow, so stare at ceiling light.</p>
+        <p>I'm a full-stack JavaScript developer with a history of design. I've been working in web design and development for ten years. I got my start in 2004 at a Spectral Fusion, a non-profit focused on teaching students to build websites and then have them apply their skills to design and build websites for on campus organizations and departments. There I learned how to manage a project, design and build websites from the ground up using HTML and CSS. As the years progressed I acquired more experience in design and development improving my library of tools. I've always preferred the coding side of things and recently enrolled in Code Fellows to improve my JavaScript skills as well as acquire a better understanding of backend programming.</p>
+      </section>
+      <section data-content="history" class="history">
+        <h2>History</h2>
+        <div class="timeline">
+        <h3>Lead Creative Developer</h3>
+        <p>Accretive Technology Group (Dec. 2010 - Jan. 2016)
+        <p>Leads a team in the design and development online marketing materials using HTML, CSS, JavaScript and PHP. Utilization of A/B testing software and analytic software to analyze marketing material success and implement changes.</p>
+        <h3>Web Developer</h3>
+        <p>Bigforkweb Development (Jul. 2008 - Feb. 2010)
+        <p>Front-end website design and development, CMS configuration and customization, online store customization, copy-writing, researching new technologies, in-person technology training, creation of training materials, client communication.</p>
+        <h3>Senior Web Developer</h3>
+        <p>Spectral Fusion (2005 - 2008)
+        <p>Front-end website design and development. Project management and the intake of new clients. Training new graphic designers and front end developers.</p>
+      </div>
       </section>
       <section id="portfolio" data-content="portfolio">
         <h2>Portfolio</h2>
         <article class="project-details"></article>
       </section>
-      <section data-content="skills">
-        <h2>Skills</h2>
-        <p>Attack feet present belly, scratch hand when stroked or sit by the fire and intently sniff hand, or swat turds around the house. Meow for food, then when human fills food dish, take a few bites of food and continue meowing steal the warm chair right after you get up sit by the fire behind the couch lick plastic bags, for jump around on couch, meow constantly until given food, so throwup on your pillow. Russian blue eat grass, throw it back up yet eat the fat cats food and refuse to leave cardboard box purr for no reason. Bathe private parts with tongue then lick owner's face ignore the squirrels, you'll never catch them anyway immediately regret falling into bathtub chirp at birds so pee in the shoe. Lick yarn hanging out of own butt find something else more interesting attack the dog then pretend like nothing happened poop in litter box, scratch the walls and lay on arms while you're using the keyboard lick arm hair, run outside as soon as door open. </p>
-        <p>Shove bum in owner's face like camera lens chew on cable where is my slave? I'm getting hungry cat is love, cat is life lay on arms while you're using the keyboard vommit food and eat it again. Give attitude. Lounge in doorway poop in litter box, scratch the walls so give attitude plan steps for world domination stare out the window eat prawns daintily with a claw then lick paws clean wash down prawns with a lap of carnation milk then retire to the warmest spot on the couch to claw at the fabric before taking a catnap and where is my slave? I'm getting hungry. Intently stare at the same spot sleep on keyboard. Kitty power! plan steps for world domination ears back wide eyed you call this cat food? but sit by the fire or meowwww. Stick butt in face refuse to leave cardboard box, shove bum in owner's face like camera lens climb a tree, wait for a fireman jump to fireman then scratch his face yet scratch at the door then walk away throwup on your pillow, so stare at ceiling light.</p>
-      </section>
-      <section data-content="history">
-        <h2>Skills</h2>
-        <p>Attack feet present belly, scratch hand when stroked or sit by the fire and intently sniff hand, or swat turds around the house. Meow for food, then when human fills food dish, take a few bites of food and continue meowing steal the warm chair right after you get up sit by the fire behind the couch lick plastic bags, for jump around on couch, meow constantly until given food, so throwup on your pillow. Russian blue eat grass, throw it back up yet eat the fat cats food and refuse to leave cardboard box purr for no reason. Bathe private parts with tongue then lick owner's face ignore the squirrels, you'll never catch them anyway immediately regret falling into bathtub chirp at birds so pee in the shoe. Lick yarn hanging out of own butt find something else more interesting attack the dog then pretend like nothing happened poop in litter box, scratch the walls and lay on arms while you're using the keyboard lick arm hair, run outside as soon as door open. </p>
-        <p>Shove bum in owner's face like camera lens chew on cable where is my slave? I'm getting hungry cat is love, cat is life lay on arms while you're using the keyboard vommit food and eat it again. Give attitude. Lounge in doorway poop in litter box, scratch the walls so give attitude plan steps for world domination stare out the window eat prawns daintily with a claw then lick paws clean wash down prawns with a lap of carnation milk then retire to the warmest spot on the couch to claw at the fabric before taking a catnap and where is my slave? I'm getting hungry. Intently stare at the same spot sleep on keyboard. Kitty power! plan steps for world domination ears back wide eyed you call this cat food? but sit by the fire or meowwww. Stick butt in face refuse to leave cardboard box, shove bum in owner's face like camera lens climb a tree, wait for a fireman jump to fireman then scratch his face yet scratch at the door then walk away throwup on your pillow, so stare at ceiling light.</p>
+      <section data-content="skills" class="experience">
+        <h2>Experience</h2>
+        <article>
+          <h3>Development</h3>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>javaScript</li>
+            <li>jQuery</li>
+            <li>SQL</li>
+            <li>Regular Expression</li>
+            <li>PHP</li>
+          </ul>
+        </article>
+        <article>
+          <h3>Technology</h3>
+          <ul>
+            <li>Project Management</li>
+            <li>Graphic Design</li>
+            <li>UX Design</li>
+            <li>A/B Testing</li>
+          </ul>
+        </article>
+        <article>
+          <h3>Software</h3>
+          <ul>
+            <li>Photoshop</li>
+            <li>Illustrator</li>
+            <li>Splunk</li>
+            <li>Visual Website Optimizer</li>
+          </ul>
+        </article>
       </section>
 
       <footer></footer>
@@ -104,6 +134,7 @@
     <script src="scripts/repo.js"></script>
     <script src="scripts/portfolioView.js"></script>
     <script src="scripts/scrollController.js"></script>
+    <script src="scripts/pageController.js"></script>
     <script src="scripts/routes.js"></script>
   </body>
 </html>

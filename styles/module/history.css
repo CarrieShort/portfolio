@@ -1,0 +1,38 @@
+.history {
+  background:#343434;
+  color: #ffffff;
+  position: relative;
+}
+.history h2 {
+  color:#7dddc3;
+}
+.timeline {
+  border-left: 1px solid #ffffff;
+  padding-left: 20px;
+  margin-left: 15px;
+  margin-top: 30px;
+}
+.history:before {
+  content: '';
+  display: block;
+  width: 0;
+	height: 0;
+	border-left: 40px solid transparent;
+	border-right: 40px solid transparent;
+	border-top: 30px solid #ffffff;
+  position: absolute;
+  top: 0;
+  margin-left: 50%;
+  left: -40px;
+}
+.timeline h3:before {
+  content: '';
+  display:block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ffffff;
+  border-radius: 20px;
+  position: absolute;
+  left: 25px;
+  background: #343434;
+}
