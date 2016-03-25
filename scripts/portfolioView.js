@@ -4,7 +4,7 @@
 
   // helper functions
   // toggle sticky header class based on scroll position
-  function stickyHeader(){
+  portfolioView.stickyHeader = function(){
     if($(this).scrollTop() > $headerPosition){
       $('header').addClass('sticky');
     } else {
@@ -19,7 +19,7 @@
 
       // console.log('portfoliosRepo',portfoliosRepo);
       var matchedProject = PortfolioItem.all.filter(function(portfolioItem){
-        return portfolioItem.project === $clickedItem;
+        return portfolioItem.github === $clickedItem;
       });
       $('.project-details').insertAfter($(this)).show();
       $('.project-details').html(matchedProject[0].compileToHtml('#detail-template'));
@@ -64,14 +64,6 @@
     },[]);
 
     $('footer').append('<p>There are ' + palindromeCount + ' palindromes on this page. They are : ' + uniquePalindromes.join(', '));
-  };
-
-  portfolioView.initPortfolio = function(){
-    PortfolioItem.fetchAll();
-    portfolioView.detailHandler();
-    portfolioView.toggleMobileMenu();
-    portfolioView.funFacts();
-    $(window).scroll(stickyHeader);
   };
 
   module.portfolioView = portfolioView;
