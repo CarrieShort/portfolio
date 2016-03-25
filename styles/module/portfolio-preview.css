@@ -6,6 +6,9 @@
   cursor: pointer;
   border: 1px solid #ffffff;
 }
+.project-preview img {
+  width: 100%;
+}
 
 .project-preview section{
   position: absolute;

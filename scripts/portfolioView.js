@@ -51,7 +51,7 @@
   };
 
   portfolioView.funFacts = function(){
-    var palindromes = $('section p').text().split(' ').reduce(function(a,b){
+    var palindromes = $('section p, section ul li').text().split(' ').reduce(function(a,b){
       if(b === b.split('').reverse().join('')) a.push(b);
       return a;
     },[]);
