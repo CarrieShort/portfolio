@@ -30,15 +30,16 @@
   margin-left: -100%;
   width: 100%;
   left: 0;
-
-
 }
+
 .project-details.expanded{
   margin:0;
 }
+
 .project-details img {
   max-width: 100%;
 }
+
 .close{
   position: absolute;
   top: 10px;
@@ -55,13 +56,10 @@
     width: 50%;
     margin-left: -50%;
   }
-
 }
 
 @media screen and (min-width: 800px) {
-
   .project-preview section{
     display: none;
   }
-
 }

@@ -40,6 +40,10 @@ header nav{
 	width: 100%;
 }
 
+header nav ul {
+	display: none;
+}
+
 header nav ul li{
 	display: block;
 	border-bottom:1px solid #000000;
@@ -65,7 +69,7 @@ header nav ul li a {
 	header nav{
 		width: auto;
 	}
-	header nav ul[style]{
+	header nav ul[style],header nav ul{
 		display: block!important;
 	}
 	.mobile-menu {

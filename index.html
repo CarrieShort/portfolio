@@ -9,11 +9,13 @@
     <link type="text/css" rel="stylesheet" href="styles/layout.css">
     <link type="text/css" rel="stylesheet" href="styles/module/header.css">
     <link type="text/css" rel="stylesheet" href="styles/module/banner.css">
+    <link type="text/css" rel="stylesheet" href="styles/module/history.css">
     <link type="text/css" rel="stylesheet" href="styles/module/portfolio-preview.css">
     <link type="text/css" rel="stylesheet" href="styles/state/hover.css">
     <link type="text/css" rel="stylesheet" href="styles/state/sticky.css">
     <script id="preview-template" type="text/x-handlebars-template">
-        <article class="project-preview" data-project="{{github}}" style="background-image:url(img/projects/{{previewImage}})">
+        <article class="project-preview" data-project="{{github}}">
+          <img src="img/projects/{{previewImage}}" />
           <section>
             <h3>{{title}}</h3>
             <p>{{shortDesc}}</p>
@@ -81,12 +83,9 @@
         <h2>About</h2>
         <p>I'm a full-stack JavaScript developer with a history of design. I've been working in web design and development for ten years. I got my start in 2004 at a Spectral Fusion, a non-profit focused on teaching students to build websites and then have them apply their skills to design and build websites for on campus organizations and departments. There I learned how to manage a project, design and build websites from the ground up using HTML and CSS. As the years progressed I acquired more experience in design and development improving my library of tools. I've always preferred the coding side of things and recently enrolled in Code Fellows to improve my JavaScript skills as well as acquire a better understanding of backend programming.</p>
       </section>
-      <section id="portfolio" data-content="portfolio">
-        <h2>Portfolio</h2>
-        <article class="project-details"></article>
-      </section>
-      <section data-content="history">
+      <section data-content="history" class="history">
         <h2>History</h2>
+        <div class="timeline">
         <h3>Lead Creative Developer</h3>
         <p>Accretive Technology Group (Dec. 2010 - Jan. 2016)
         <p>Leads a team in the design and development online marketing materials using HTML, CSS, JavaScript and PHP. Utilization of A/B testing software and analytic software to analyze marketing material success and implement changes.</p>
@@ -96,6 +95,11 @@
         <h3>Senior Web Developer</h3>
         <p>Spectral Fusion (2005 - 2008)
         <p>Front-end website design and development. Project management and the intake of new clients. Training new graphic designers and front end developers.</p>
+      </div>
+      </section>
+      <section id="portfolio" data-content="portfolio">
+        <h2>Portfolio</h2>
+        <article class="project-details"></article>
       </section>
       <section data-content="skills">
         <h2>Experience</h2>
