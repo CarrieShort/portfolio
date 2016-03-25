@@ -19,8 +19,42 @@ h3 {
 	font-size: 1.6em;
 }
 
+h4 {
+	font-size: 1.3em;
+}
+
 p {
 	font-size: 1em;
 	line-height: 1.5em;
-	margin: 2em 0;
+	margin: 1em 0 1.5em 0;
+}
+
+ul {
+	margin-left: 30px;
+}
+
+ul li {
+	margin: 1em 0;
+	list-style: disc;
+}
+
+a {
+	color:#b01d62;
+	text-decoration: none;
+}
+
+.button {
+	display: block;
+	text-align: center;
+	background: #52ccab;
+	margin: 0 auto;
+	padding: 20px;
+	color: #ffffff;
+	text-decoration: none;
+	font-size: 1.8em;
+	transition: all 0.4s ease;
+}
+
+.button:hover {
+	background: #279d7d;
 }

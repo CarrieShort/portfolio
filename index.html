@@ -33,22 +33,11 @@
           {{#each contributors}}
           <li><a href="{{url}}">{{name}}</a>: {{commits}} commits</li>
           {{/each}}
+        </ul>
         {{/if}}
         {{{description}}}
         <p><a class="button" href="{{demoLink}}">Demo</a></p>
         <a class="close"><i class="fa fa-times-circle"></i></a>
-    </script>
-    <script id="repo-template" type="text/x-handlebars-template">
-      <li>
-        <a href="{{html_url}}" target="_blank"><h3>{{name}}</h3></a>
-        <p>Description: {{description}}</p>
-        <p>Language: {{language}}</p>
-        <p>Created: {{created_at}}</p>
-        <p>Last updated: {{updated_at}}</p>
-        {{#if watchers_count}}
-          <p>{{watchers_count}} watching this repo</p>
-        {{/if}}
-      </li>
     </script>
   </head>
   <body>
